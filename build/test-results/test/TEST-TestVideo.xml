@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestVideo" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-17T05:03:23" hostname="DESKTOP-HFG6S8F" time="14.676">
+  <properties/>
+  <testcase name="testLogin" classname="TestVideo" time="14.676"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[console.warn: LoginRecipes: "Falling back to a synchronous message for: https://adminqa.onestoplms.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://adminqa.onestoplms.com."
+]]></system-err>
+</testsuite>
