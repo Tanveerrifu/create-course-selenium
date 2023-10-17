@@ -65,12 +65,31 @@ public class TestVideo {
         builder.moveToElement(typeInstructor).sendKeys("Tanvir").perform();
 
         // Wait for 30 seconds for the instructor name to appear in the dropdown
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-//        By instructorNameLocator = By.xpath("//xpath_to_instructor_name_in_dropdown");
-//        WebElement instructorNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(instructorNameLocator));
+            wait = new WebDriverWait(driver, 30);
+        By instructorNameLocator = By.xpath("//div[@id='react-select-2-option-0']");
+        WebElement instructorNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(instructorNameLocator));
 
         // Click on the instructor name in the dropdown
-//        instructorNameElement.click();
+        instructorNameElement.click();
+        WebElement pageBody= driver.findElement(By.cssSelector(".card-body"));
+        pageBody.click();
+
+        WebElement courseCategory = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[4]/div[1]/div[1]/div[1]"));
+
+
+        // Click the element
+        courseCategory.click();
+
+        WebElement selectCategory= driver.findElement(By.cssSelector("#react-select-3-option-0"));
+        selectCategory.click();
+        pageBody.click();
+
+        //Click create course
+
+        WebElement createCourse= driver.findElement(By.xpath("//button[normalize-space()='Create Course']"));
+        createCourse.click();
+        WebElement confirmCourse = driver.findElement(By.xpath("//button[normalize-space()='Confirm']"));
+        confirmCourse.click();
 
 
 
