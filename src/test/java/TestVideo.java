@@ -93,6 +93,35 @@ public class TestVideo {
         WebElement confirmCourse = driver.findElement(By.xpath("//button[normalize-space()='Confirm']"));
         confirmCourse.click();
 
+        try {
+            Thread.sleep(50000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //create course content
+        WebElement createChapter = driver.findElement(By.xpath("//button[normalize-space()='+ Create New chapter']"));
+        //wait until this xpath is visible
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='+ Create New chapter']")));
+        builder.moveToElement(createChapter).doubleClick().perform();
+        WebElement chapterName = driver.findElement(By.xpath("//input[@id='chapter_name']"));
+        chapterName.sendKeys("Test Chapter");
+        WebElement continueBtn= driver.findElement(By.cssSelector("button[type='submit']"));
+        continueBtn.click();
+        WebElement lessonName= driver.findElement(By.cssSelector("#lesson_name"));
+        lessonName.sendKeys("Test Lesson");
+        String courseVideo="C:\\Users\\tanvi\\Desktop\\Orange_HRM\\src\\test\\resources\\courseVideo.mp4";
+        WebElement uploadVideo= driver.findElement(By.cssSelector("#video"));
+        uploadVideo.sendKeys(courseVideo);
+        WebElement continueVideoUpload = driver.findElement(By.xpath("//button[@type='button'][normalize-space()='Continue']"));
+        continueVideoUpload.click();
+        WebElement confirmVideoUpload = driver.findElement(By.xpath("//div[@class='modal overflow-auto fade modal-primary show d-block']//input[@id='__input']"));
+        confirmVideoUpload.sendKeys("Confirm");
+        WebElement confirmVideoUploadBtn = driver.findElement(By.xpath("//button[@class='btn-primary btn-sm btn']"));
+        confirmVideoUploadBtn.click();
+
+
+
+
 
 
 
