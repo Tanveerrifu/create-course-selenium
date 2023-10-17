@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestVideo" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-17T06:08:16" hostname="DESKTOP-HFG6S8F" time="29.498">
+<testsuite name="TestVideo" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-17T06:13:25" hostname="DESKTOP-HFG6S8F" time="15.357">
   <properties/>
-  <testcase name="testLogin" classname="TestVideo" time="29.498"/>
+  <testcase name="testLogin" classname="TestVideo" time="15.357"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[console.warn: LoginRecipes: "Falling back to a synchronous message for: https://adminqa.onestoplms.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://adminqa.onestoplms.com."

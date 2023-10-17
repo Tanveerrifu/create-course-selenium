@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -50,8 +51,9 @@ public class TestVideo {
         WebElement searchCourseLink = driver.findElement(By.linkText("Add Course"));
         searchCourseLink.click();
 
+        String randomCourseName = "Test Course " + RandomStringUtils.randomAlphabetic(8);
         WebElement courseNameInput = driver.findElement(By.name("course_name"));
-        courseNameInput.sendKeys("Test Course ABCDEFGH");
+        courseNameInput.sendKeys(randomCourseName);
 
         WebElement typeInstructor = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]"));
 
